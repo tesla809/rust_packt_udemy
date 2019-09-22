@@ -267,6 +267,25 @@ The function signature will throw an error. One cannot return a type lower than 
 ![Mismatched types error](/images/mismatched-types-error-rust.png)
 *Mismatched types error*
 
+The compiler is SUPER helpful in finding and suggesting documentation to solve the issue.
+
+**Casting to fix mixing integer types in functions**
+```rust
+fn main() {
+  let i1 = 1;
+  let i2 = 2;
+  println!("{} + {} = {}", i1, i2, add(i1, i2));
+}
+
+fn add(a: i32, b: i64) -> i32 {
+  return a + (b as i32);  // casts i64 to i32 type 
+}
+```
+
+```return a + (b as i32);``` casts i64 to i32 type. 
+
+The parentheses are there for clarity. We could write it as
+```return a + b as i32;``` 
 
 
 
