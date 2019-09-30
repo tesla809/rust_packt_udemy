@@ -52,15 +52,15 @@ fn say_hello(){
 fn math_operations() {
     let a = 1;  // immutable binding aka variable (by default)
     let b = 2;
-    println!("{} + {} is {}", a, b, a + b);  // string interpolation
-}
-```
+    println!("{} + {} is {}", a, b, a + b); 
+  ```
 
 **String interpolation**
 ```println!("{} + {} is {}", a, b, a + b);```
 The first argument is the string itself. ```{}``` are used as placeholders. The next three arguments will be inserted into the placeholders sequentially.
 
-###**Type system described**
+
+#### **Type system described**
 Rust has a strong, static type system. It is also a compiled language, which means you have to run it through a build step and compile the code an executable.
 
 **Strong** means that it doesn't automatically turn one type into another.
